@@ -22,9 +22,19 @@ namespace S00235207_JanuaryExam_EunanMurray
 
     public partial class MainWindow : Window
     {
+        private List<BudgetItem> allBudgetItems = new List<BudgetItem>();
         public MainWindow()
         {
             InitializeComponent();
         }
+
+
+        private void LoadBudgetData()
+        {
+
+            // Creating teams for France, Italy, and Spain and adding players to them
+            BudgetItem.Add(new BudgetItem() { Name = "Grant", Amount = 300, Date = 5, recurr = BudgetItemType.Income});
+        }
+
     }
 }
