@@ -15,10 +15,11 @@ using System.Windows.Shapes;
 
 namespace S00235207_JanuaryExam_EunanMurray
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    /// d
+    /*Name: ObjectOrientedProgramming JanExam 
+    Author: Eunan Murray 
+    Date Created: 06/01/2024 
+    Purpose: */
+
     public partial class MainWindow : Window
     {
         public MainWindow()
