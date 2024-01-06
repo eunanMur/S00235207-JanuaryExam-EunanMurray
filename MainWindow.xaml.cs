@@ -26,6 +26,8 @@ namespace S00235207_JanuaryExam_EunanMurray
         public MainWindow()
         {
             InitializeComponent();
+            LoadBudgetData();
+            DisplayData();
         }
 
 
@@ -33,8 +35,36 @@ namespace S00235207_JanuaryExam_EunanMurray
         {
 
             // Creating teams for France, Italy, and Spain and adding players to them
-            BudgetItem.Add(new BudgetItem() { Name = "Grant", Amount = 300, Date = 5, recurr = BudgetItemType.Income});
+            allBudgetItems.Add(new BudgetItem() {Name = "Grant", Amount = 300, Date = 5, Type = BudgetItemType.Income, Recurring = true});
+            allBudgetItems.Add(new BudgetItem() { Name = "Bonus", Amount = 300, Date = 15, Type = BudgetItemType.Income, Recurring = false });
+            allBudgetItems.Add(new BudgetItem() { Name = "Wages", Amount = 100, Date = 25, Type = BudgetItemType.Income, Recurring = true });
+            allBudgetItems.Add(new BudgetItem() { Name = "Rent", Amount = 400, Date = 1, Type = BudgetItemType.Expenses, Recurring = true });
+            allBudgetItems.Add(new BudgetItem() { Name = "Flight", Amount = 100, Date = 5, Type = BudgetItemType.Expenses, Recurring = false });
+            allBudgetItems.Add(new BudgetItem() { Name = "Netflix", Amount = 10, Date = 15, Type = BudgetItemType.Expenses, Recurring = true });
+            allBudgetItems.Add(new BudgetItem() { Name = "Spotify", Amount = 8, Date = 20, Type = BudgetItemType.Expenses, Recurring = true });
+
         }
 
+        private void DisplayData()
+        {
+            lstIncome.Items.Clear();
+            foreach (var item in allBudgetItems)
+            {
+                if (item.Type == BudgetItemType.Income)
+                {
+                    lstIncome.Items.Add(item);
+                }
+
+                else
+                {
+                    lstExpenses.Items.Add(item);
+                }
+            }
+        }
+
+        private void txtAmount_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -17,9 +17,9 @@
         <RadioButton Content="Income" HorizontalAlignment="Left" Margin="583,174,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="Expense" HorizontalAlignment="Left" Margin="694,174,0,0" VerticalAlignment="Top"/>
         <Label Content="Date" VerticalAlignment="Top" Margin="586,102,162,0" Height="31"/>
-        <DatePicker HorizontalAlignment="Left" Margin="655,102,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="date" Margin="655,110,35,309"/>
         <Label Content="Amount" VerticalAlignment="Top" Margin="586,136,156,0" Height="32" RenderTransformOrigin="0.497,0.914"/>
-        <TextBox Name="txtAmount" Margin="655,144,35,276"/>
+        <TextBox Name="txtAmount" Margin="655,144,35,275" TextChanged="txtAmount_TextChanged"/>
         <Label Content="Name" VerticalAlignment="Top" Margin="584,65,158,0" Height="32" RenderTransformOrigin="0.497,0.914"/>
         <TextBox Name="name" Margin="655,74,35,346"/>
         <TextBox Name="Search" Margin="135,373,555,47"/>
