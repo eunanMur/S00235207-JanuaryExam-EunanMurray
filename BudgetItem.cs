@@ -4,13 +4,14 @@ using System;
 
 namespace S00235207_JanuaryExam_EunanMurray
 {
+    //setting up Enum
     public enum BudgetItemType
    {
         Income,
         Expenses
     }
 
-
+    //Setting up Data types and such as well as icomparable
     public class BudgetItem : IComparable
     {
         public string Name { get; set; }
@@ -21,7 +22,7 @@ namespace S00235207_JanuaryExam_EunanMurray
         public bool Recurring { get; set; }
 
 
-        // Constructor to initialize a member with a first name, surname, and date of birth
+        // Constructor to initialize an item with name, amount, date, type and recurring
         public BudgetItem(string name, decimal amount, int date, BudgetItemType type, bool reccuring)
         {
             Name = name;
@@ -35,14 +36,13 @@ namespace S00235207_JanuaryExam_EunanMurray
         {
         }
 
-        // Q7: Override ToString to display player information in the ListBox
-        // Format: "FirstName LastName (Age) POSITION"
+        //to force into string for display
         public override string ToString()
         {
             return $"{Date} {Name} {Amount} - ({Type})";
         }
 
-        // Method to compare members based on their surname
+        // Method to compare items based on their date
         public int CompareTo(object obj)
         {
             if (obj == null) return 1;

@@ -11,15 +11,15 @@
         <TextBlock FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="318,43,0,0"><Run Language="en-gb" Text="Expenses"/></TextBlock>
         <ListBox Name="lstIncome" Margin="56,70,549,157" />
         <ListBox Name="lstExpenses" Margin="318,70,287,157" />
-        <CheckBox Name="chkRecurring" Content="Recurring" Checked="chkAccounts_Checked" Unchecked="chkAccounts_Checked" RenderTransformOrigin="0.774,0.509" Margin="583,205,98,208"/>
-        <Button Content="Remove" HorizontalAlignment="Left" Margin="583,278,0,0" VerticalAlignment="Top" Width="64" Click="btnRemove_Click" Height="22"/>
-        <Button Content="Add" HorizontalAlignment="Left" Margin="693,278,0,0" VerticalAlignment="Top" Width="64" Click="btnAdd_Click" Height="22"/>
+        <!--<CheckBox Name="chkRecurring" Content="Recurring" Checked="chkAccounts_Checked" Unchecked="chkAccounts_Checked" RenderTransformOrigin="0.774,0.509" Margin="583,205,98,208"/>-->
+        <!--<Button Content="Remove" HorizontalAlignment="Left" Margin="583,278,0,0" VerticalAlignment="Top" Width="64" Click="btnRemove_Click" Height="22"/> -->
+        <!--<Button Content="Add" HorizontalAlignment="Left" Margin="693,278,0,0" VerticalAlignment="Top" Width="64" Click="btnAdd" Height="22"/> -->
         <RadioButton Content="Income" HorizontalAlignment="Left" Margin="583,174,0,0" VerticalAlignment="Top"/>
         <RadioButton Content="Expense" HorizontalAlignment="Left" Margin="694,174,0,0" VerticalAlignment="Top"/>
         <Label Content="Date" VerticalAlignment="Top" Margin="586,102,162,0" Height="31"/>
         <TextBox Name="date" Margin="655,110,35,309"/>
         <Label Content="Amount" VerticalAlignment="Top" Margin="586,136,156,0" Height="32" RenderTransformOrigin="0.497,0.914"/>
-        <TextBox Name="txtAmount" Margin="655,144,35,275" TextChanged="txtAmount_TextChanged"/>
+        <TextBox Name="txtAmount" Margin="655,144,35,275"/>
         <Label Content="Name" VerticalAlignment="Top" Margin="584,65,158,0" Height="32" RenderTransformOrigin="0.497,0.914"/>
         <TextBox Name="name" Margin="655,74,35,346"/>
         <TextBox Name="Search" Margin="135,373,555,47"/>

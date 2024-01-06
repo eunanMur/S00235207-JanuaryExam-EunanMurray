@@ -34,7 +34,7 @@ namespace S00235207_JanuaryExam_EunanMurray
         private void LoadBudgetData()
         {
 
-            // Creating teams for France, Italy, and Spain and adding players to them
+            // Creating 7 budget items
             allBudgetItems.Add(new BudgetItem() {Name = "Grant", Amount = 300, Date = 5, Type = BudgetItemType.Income, Recurring = true});
             allBudgetItems.Add(new BudgetItem() { Name = "Bonus", Amount = 300, Date = 15, Type = BudgetItemType.Income, Recurring = false });
             allBudgetItems.Add(new BudgetItem() { Name = "Wages", Amount = 100, Date = 25, Type = BudgetItemType.Income, Recurring = true });
@@ -45,6 +45,7 @@ namespace S00235207_JanuaryExam_EunanMurray
 
         }
 
+        //Display Date by comparing the Enum Budget type.
         private void DisplayData()
         {
             lstIncome.Items.Clear();
@@ -62,9 +63,16 @@ namespace S00235207_JanuaryExam_EunanMurray
             }
         }
 
-        private void txtAmount_TextChanged(object sender, TextChangedEventArgs e)
+        //Method to add item
+        private void btnAdd(object sender, RoutedEventArgs e)
         {
+            String Name = (name.Text);
+            decimal Amount = decimal.Parse(txtAmount.Text);
+            int Date = int.Parse(date.Text);
+            
+            allBudgetItems.Add(new BudgetItem() { Name =  Name, Amount = Amount, Date = Date, Type = BudgetItemType.Expenses, Recurring=true });
 
         }
+
     }
 }
